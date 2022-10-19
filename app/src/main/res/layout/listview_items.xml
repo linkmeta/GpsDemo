@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.linkmeta.gpsdemo.model.GnssInfoModel"/>
+        <variable
+            name="gnssInfo"
+            type="GnssInfoModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/flag"
+            android:text="@{gnssInfo.flag}"
+            android:layout_width="35sp"
+            android:layout_height="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/prn"
+            android:text="@{gnssInfo.prn}"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/snr"
+            android:text="@{gnssInfo.snr}"
+            android:layout_width="60sp"
+            android:layout_height="28dp"
+            android:layout_weight="1"></TextView>
+
+        <TextView
+            android:id="@+id/el"
+            android:text="@{gnssInfo.el}"
+            android:layout_width="80sp"
+            android:layout_height="20sp"
+            android:layout_weight="1"></TextView>
+
+        <TextView
+            android:id="@+id/az"
+            android:text="@{gnssInfo.az}"
+            android:layout_width="80sp"
+            android:layout_height="20sp"
+            android:layout_weight="1"></TextView>
+
+        <TextView
+            android:id="@+id/used_in_fix"
+            android:text="@{gnssInfo.usedInFix}"
+            android:layout_width="35sp"
+            android:layout_height="20sp"></TextView>
+    </LinearLayout>
+</layout>

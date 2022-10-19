@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.linkmeta.gpsdemo.viewmodel.GnssViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        tools:context=".MainActivity">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="1,2"
+            android:stretchColumns="0,1,2">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="latitude"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/latitude_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.latitude}"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="longtitude"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/longtitude_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.longtitude}"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="altitude"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/altitude_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.altitude}"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TTFF"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/TTFF_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.TTFF}"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="inused"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/inused_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.inused}"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="15sp" />
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="120dp"/>
+    </RelativeLayout>
+</layout>
